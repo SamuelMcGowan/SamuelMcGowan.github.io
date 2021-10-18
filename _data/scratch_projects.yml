@@ -1,5 +1,6 @@
 - title: 100% Pen Image Renderer
   link: "https://turbowarp.org/554916406/embed?fps=60"
-  descr: "This"
+  descr: "A simple image renderer with bilinear interpolation."
 - title: Cloth Simulation
   link: "https://turbowarp.org/566813360/embed?fps=60"
+  descr: "A 2D cloth simulation using the spring-mass model."

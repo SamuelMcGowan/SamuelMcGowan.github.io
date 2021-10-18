@@ -6,16 +6,17 @@ title: Projects
 </script>
 
 <h1>Some of my projects</h1>
-
 <h2>Scratch Projects</h2>
-<p></p>
 
 <select onchange="loadTurbowarpProject(this.value);">
     <option value="">Pick one to view...</option>
     {% for project in site.data.scratch_projects %}
-        <option value="{{ project.link }}">{{ project.title }}</option>
+        <option value="{{ project | jsonify | xml_escape }}">{{ project.title }}</option>
     {% endfor %}
 </select>
 <br>
 
-<iframe id="turbowarp-viewer" src="" width="499" height="416" allowtransparency="true" frameborder="0" scrolling="no" allowfullscreen></iframe>
+<div id="turbowarp">
+    <p id="turbowarp-descr"></p>
+    <iframe id="turbowarp-viewer" src="" width="499" height="416" allowtransparency="true" frameborder="0" scrolling="no" allowfullscreen></iframe>
+</div>

@@ -100,17 +100,17 @@ h1 {
     text-decoration: underline;
 }
 
-h1:before {
-    content: "# ";
-}
+// h1:before {
+//     content: "# ";
+// }
 
-h2:before {
-    content: "## ";
-}
+// h2:before {
+//     content: "## ";
+// }
 
-h3:before {
-    content: "### ";
-}
+// h3:before {
+//     content: "### ";
+// }
 
 a:not(.unstyled-link) {
     @include link;
@@ -246,9 +246,17 @@ pre.highlight {
 }
 
 // TURBOWARP VIEWER
+#turbowarp {
+    display: none;
+}
 #turbowarp-viewer {
     @include nospace;
     //padding-bottom: 30px;
     @include card;
     border-radius: $corner-size;
+}
+
+#turbowarp-descr {
+    @include nospace;
+    margin-bottom: 15px;
 }
