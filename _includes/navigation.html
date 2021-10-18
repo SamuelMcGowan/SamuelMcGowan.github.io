@@ -1,0 +1,11 @@
+<nav>
+    <ul class="navbar">
+        <li><img src="images/profile.jpg" class="profile-img"></li>
+        {% for item in site.data.navigation %}
+            <li><a href="{{ item.link }}"
+            {% if page.url == item.link %}class="current-page"{% endif %}>
+                {{ item.title }}
+            </a></li>
+        {% endfor %}
+    </ul>
+</nav>
