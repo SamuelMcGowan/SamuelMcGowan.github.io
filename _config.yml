@@ -1,8 +1,12 @@
 title: Squoop's Homepage
 description: The homepage of Squoop.
-theme: jekyll-theme-midnight
 
 defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
   - scope:
       path: ""
     values:

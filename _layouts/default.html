@@ -3,14 +3,16 @@
     <head>
         <meta charset="utf-8">
         <title>Squoop | {{ page.title }}</title>
-        <link rel="stylesheet" href="/styles.css">
+        <link rel="stylesheet" href="/assets/css/styles.css">
+        <link rel="stylesheet" href="/assets/css//syntax.css">
         {% feed_meta %}
         {% seo %}
     </head>
     <body>
-        {% include navigation.html %}
-        <div id="content">
+        <header>{% include navigation.html %}</header>
+        <div id="main">
             {{ content }}
         </div>
+        {% include footer.html %}
     </body>
 </html>

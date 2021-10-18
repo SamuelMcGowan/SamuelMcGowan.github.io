@@ -1,0 +1,254 @@
+---
+---
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&family=Work+Sans:ital@1&display=swap');
+
+$bg-color: #33333b;
+$bg-color-light: #4d4d59;
+$bg-color-dark: #2d2d33;
+$fg-color: #e6d9d1;
+$fg-color-light: #f7f1ed;
+$fg-color-dark: #b6afab;
+$accent-color: #e64b2c;
+$accent-color-dark: #c54026;
+
+$corner-size: 3px;
+
+$font-size-code: 13px;
+
+$fade-speed: 30ms;
+
+@mixin nospace {
+    padding: 0;
+    margin: 0;
+}
+
+@mixin card {
+    background-color: $bg-color-light;
+    box-shadow: 0 0 10px $bg-color-dark;
+    transition-duration: $fade-speed;
+}
+
+@mixin card-hover {
+    box-shadow: 0 0 25px $bg-color-dark;
+}
+
+@mixin link {
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+
+    transition-duration: $fade-speed;
+    position: relative;
+    color: $fg-color;
+}
+
+@mixin link-hover {
+    bottom: 0.1em;
+    color: $accent-color;
+}
+
+@mixin link-visited {
+    color: $fg-color-dark;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+
+    max-width: 800px;
+
+    padding: 20px;
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+footer {
+    @include card;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    padding: 10px 20px;
+}
+
+html {
+    position: relative;
+    @include nospace;
+    min-height: 100%;
+}
+
+body {
+    @include nospace;
+
+    background-color: $bg-color;
+    font-family: 'Work Sans', monospace;
+    font-size: 0.9em;
+    color: $fg-color;
+}
+
+// body * {
+//     border: 1px solid black;
+// }
+
+h1, h2, h3 {
+    font-family: 'Work Sans', sans-serif;
+}
+
+h1 {
+    text-decoration: underline;
+}
+
+h1:before {
+    content: "# ";
+}
+
+h2:before {
+    content: "## ";
+}
+
+h3:before {
+    content: "### ";
+}
+
+a:not(.unstyled-link) {
+    @include link;
+}
+
+a:not(.unstyled-link):visited {
+    @include link-visited;
+}
+
+a:not(.unstyled-link):hover {
+    @include link-hover;
+}
+
+ul {
+    padding-left: 15px;
+    list-style-type: circle;
+    line-height: 30px;
+}
+
+blockquote {
+    margin-left: 0;
+    font-family: "Noto Sans Mono";
+}
+
+blockquote p:before {
+    content: "> ";
+}
+
+select {
+    @include card;
+    margin-right: auto;
+    margin-bottom: 15px;
+    padding: 7px;
+    
+    border: none;
+    border-radius: $corner-size;
+    color: inherit;
+}
+
+.subtitle {
+    font-style: italic;
+}
+
+// NAVBAR
+.navbar {
+    @include nospace;
+    @include card;
+
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 50px;
+    overflow: auto;
+
+    list-style-type: none;
+}
+
+.navbar li {
+    line-height: normal;
+    float: left;
+}
+
+.navbar li:last-child {
+    float: right;
+}
+
+.navbar .float-centered {
+    display: table-cell;
+    height: 50px;
+    vertical-align: middle;
+}
+
+.navbar li a, .navbar li a:visited {
+    @include link;
+    display: block;
+    position: relative;
+    padding-left: 15px;
+
+    text-decoration: none;
+}
+.navbar li a.current-page {
+    text-decoration: underline;
+}
+.navbar li a:hover {
+    @include link-hover;
+    bottom: 1px;
+}
+
+.navbar .profile-img {
+    margin-right: 5px;
+    width: 25px;
+    border-radius: 5px;
+}
+
+// POST LIST
+.post-list {
+    @include nospace;
+    list-style-type: none;
+}
+
+.post-list a {
+    @include card;
+
+    display: block;
+    padding: 5px 15px;
+    margin-bottom: 15px;
+
+    text-decoration: none;
+
+    border-radius: $corner-size;
+}
+.post-list a:hover {
+    @include card-hover;
+}
+
+.post-list h2, .post-list a:visited {
+    @include link;
+}
+.post-list a:hover h2 {
+    @include link-hover;
+}
+
+// CODE
+.highlight pre {
+    @include card;
+    margin: 0;
+    padding: 15px;
+    border-radius: $corner-size;
+    line-height: 20px;
+}
+
+pre.highlight {
+    font-size: $font-size-code;
+}
+
+// TURBOWARP VIEWER
+#turbowarp-viewer {
+    @include nospace;
+    //padding-bottom: 30px;
+    @include card;
+    border-radius: $corner-size;
+}

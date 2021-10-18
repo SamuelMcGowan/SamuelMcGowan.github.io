@@ -1,11 +1,14 @@
 <nav>
     <ul class="navbar">
-        <li><img src="images/profile.jpg" class="profile-img"></li>
+        <li><div class="float-centered"><img src="/assets/images/profile.jpg" class="profile-img"></div></li>
         {% for item in site.data.navigation %}
-            <li><a href="{{ item.link }}"
-            {% if page.url == item.link %}class="current-page"{% endif %}>
-                {{ item.title }}
-            </a></li>
+            <li><div class="float-centered">
+                <a href="{{ item.link }}"
+                {% if page.url == item.link %}class="current-page"{% endif %}>
+                    {{ item.title }}
+                </a>
+            </div></li>
         {% endfor %}
+        <li><div class="float-centered"><a href="https://github.com/SamuelMcGowan/SamuelMcGowan.github.io">GitHub Repo</a></div></li>
     </ul>
 </nav>
