@@ -1,0 +1,16 @@
+<div>
+    <script src="/assets/js/projects.js"></script>
+
+    <select onchange="loadTurbowarpProject(this.value);">
+        <option value="">Pick a project to view...</option>
+        {% for project in site.data.scratch_projects %}
+            <option value="{{ project | jsonify | xml_escape }}">{{ project.title }}</option>
+        {% endfor %}
+    </select>
+    <br>
+
+    <div id="turbowarp">
+        <p id="turbowarp-descr"></p>
+        <iframe id="turbowarp-viewer" src="" width="499" height="416" allowtransparency="true" frameborder="0" scrolling="no" allowfullscreen></iframe>
+    </div>
+</div>

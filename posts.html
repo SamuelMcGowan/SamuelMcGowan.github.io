@@ -2,11 +2,16 @@
 title: Posts
 ---
 <h1>Recent Posts</h1>
-<ul class="post-list">
-    {% for post in site.posts %}
-        <li><a href="{{ post.url }}" class="unstyled-link">
-            <h2>{{ post.title }}</h2>
-            <p>{{ post.excerpt }}</p>
-        </a></li>
-    {% endfor %}
-</ul>
+{% assign num_posts = site.posts | size %}
+{% if num_posts > 0 %}
+    <ul class="post-list">
+        {% for post in site.posts %}
+            <li><a href="{{ post.url }}" class="unstyled-link">
+                <h2>{{ post.title }}</h2>
+                <p>{{ post.excerpt }}</p>
+            </a></li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No posts yet.</p>
+{% endif %}

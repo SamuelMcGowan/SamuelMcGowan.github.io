@@ -1,0 +1,12 @@
+<div class="instagram-widget-wrapper">
+    <div class="instagram-widget">
+        <script src="/assets/js/instagram-widget.js"></script>
+        {% for i in (0..3) %}
+            <img
+                src="https://profilepageimages.usecue.com/images/differently.artistic/small/{{ i }}.jpg"
+                onclick="openImageViewer('https://profilepageimages.usecue.com/images/differently.artistic/{{ i }}.jpg')"
+            >
+        {% endfor %}
+    </div>
+    <a href="https://instagram.com/differently.artistic">More photos...</a>
+</div>
