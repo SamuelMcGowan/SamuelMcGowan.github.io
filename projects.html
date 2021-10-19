@@ -1,0 +1,8 @@
+---
+layout: project
+title: Projects
+---
+
+{% assign project = site.projects | first %}
+{% include project_title.html %}
+{{ project.content }}

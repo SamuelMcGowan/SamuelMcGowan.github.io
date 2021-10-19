@@ -1,20 +1,7 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Squoop | {{ page.title }}</title>
-        <link rel="stylesheet" href="/assets/css/styles.css">
-        <link rel="stylesheet" href="/assets/css//syntax.css">
-        <link rel="shortcut icon" type="image/jpg" href="/assets/images/profile.jpg">
-        {% feed_meta %}
-        {% seo %}
-    </head>
-    <body>
-        <header>{% include navigation.html %}</header>
-        <div id="main">
-            {{ content }}
-        </div>
-        {% include footer.html %}
-        {% include image-viewer.html %}
-    </body>
-</html>
+---
+layout: base
+---
+
+<div id="main">
+    {{ content }}
+</div>

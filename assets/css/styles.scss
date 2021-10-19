@@ -114,6 +114,11 @@ h1, h2, h3 {
 //     text-decoration: underline;
 // }
 
+a.unstyled-link {
+    color: inherit;
+    text-decoration: none;
+}
+
 a:not(.unstyled-link) {
     @include link;
 }
@@ -153,10 +158,10 @@ select:hover {
     @include hover-shadow;
 }
 
-img {
+img:not(.no-style) {
     @include card;
     margin-bottom: 15px;
-    
+
     max-width: 100%;
 }
 
@@ -246,6 +251,7 @@ img {
 // CODE
 .highlight pre {
     @include flat-card;
+    overflow: auto;
     line-height: 20px;
 }
 
@@ -332,4 +338,25 @@ pre.highlight {
 
     box-shadow: 0 0 50px $bg-color-darkest;
     border-radius: $corner-size;
+}
+
+// PROJECT VIEWER
+.project-controls {
+    width: 100%;
+}
+
+.project-link {
+    @include link;
+}
+.project-link:hover {
+    @include link-hover;
+}
+
+.project-next {
+    float: right;
+}
+
+.project-disabled {
+    cursor: pointer;
+    @include link-visited;
 }

@@ -1,0 +1,20 @@
+<div>
+    <h1>{{ project.title }}</h1>
+    <div class="project-controls">
+        {% if project.previous.url %}
+            <a class="unstyled-link project-link" href="{{ project.previous.url }}">
+                ⇦ {{ project.previous.title}}
+            </a>
+        {% else %}
+            <a class="project-disabled unstyled-link project-link">⇦ ...</a>
+        {% endif %}
+
+        {% if project.next.url %}
+            <a class="unstyled-link project-link project-next" href="{{ project.next.url }}">
+                {{ project.next.title}} ⇨
+            </a>
+        {% else %}
+            <a class="project-disabled unstyled-link project-link project-next">... ⇨</a>
+        {% endif %}
+    </div>
+</div>
