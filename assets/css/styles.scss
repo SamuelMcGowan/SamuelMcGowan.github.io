@@ -1,7 +1,7 @@
 ---
 ---
 
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Noto+Sans+Mono&family=Work+Sans:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Rubik:wght@300;700&family=Work+Sans&display=swap');
 
 $bg-color: #33333b;
 $bg-color-light: #4d4d59;
@@ -12,7 +12,8 @@ $fg-color: #e6d9d1;
 $fg-color-light: #f7f1ed;
 $fg-color-dark: #b6afab;
 $accent-color: #e64b2c;
-$accent-color-dark: #c54026;
+$accent-color-dark: #9c2710;
+$secondary-accent: #53aec5;
 
 $corner-size: 3px;
 
@@ -57,7 +58,7 @@ $fade-speed-slow: 100ms;
 
 @mixin link-hover {
     bottom: 0.1em;
-    color: $accent-color;
+    color: $secondary-accent;
 }
 
 @mixin link-visited {
@@ -68,6 +69,7 @@ $fade-speed-slow: 100ms;
     display: flex;
     flex-direction: column;
 
+    height: 100%;
     max-width: 800px;
 
     padding: 40px 30px;
@@ -95,9 +97,13 @@ html {
 body {
     @include nospace;
 
+    min-height: 100vh;
+
     background-color: $bg-color;
-    font-family: 'Work Sans', monospace;
+    font-family: 'Rubik', sans-serif;
     font-size: 0.9em;
+    line-height: 1.7em;
+
     color: $fg-color;
 }
 
@@ -139,11 +145,10 @@ ul {
 
 blockquote {
     margin-left: 0;
-    font-family: "Noto Sans Mono";
 }
 
 blockquote p:before {
-    content: "> ";
+    content: ">> ";
 }
 
 select {
@@ -158,6 +163,15 @@ select:hover {
     @include hover-shadow;
 }
 
+hr {
+    margin-top: 0;
+    margin-bottom: 15px;
+
+    width: 100%;
+    border: none;
+    border-top: 1px dotted $fg-color;
+}
+
 img:not(.no-style) {
     @include card;
     margin-bottom: 15px;
@@ -165,8 +179,62 @@ img:not(.no-style) {
     max-width: 100%;
 }
 
-.subtitle {
+.button {
+    @include nospace;
+    @include flat-card;
+    display: inline-block;
+    margin-right: auto;
+    margin-bottom: 15px;
+    padding: 7px;
+
+    cursor: pointer;
+    user-select: none;
+}
+
+.button:hover {
+    @include hover-shadow;
+}
+
+.fancy-button {
+    display: inline-block;
+    padding: 10px;
+    margin: 0 auto 15px 0;
+
+    background-color: $accent-color;
+    color: $bg-color-darkest;
+    border-bottom: 2px solid $accent-color-dark;
+    border-radius: $corner-size;
+
+    cursor: pointer;
+    user-select: none;
+
+    //transition-duration: $fade-speed;
+}
+
+.fancy-button:hover {
+    @include hover-shadow;
+}
+
+.fancy-button:active {
+    margin-top: 1px;
+    border-bottom-width: 1px;
+}
+
+a.fancy-button.unstyled-link {
+    color: $bg-color-darkest;
+}
+
+.post-info {
+    margin-top: 0;
+    margin-bottom: 5px;
+
+    font-size: 0.9em;
     font-style: italic;
+}
+
+::-moz-selection, ::selection {
+    color: $bg-color-dark;
+    background: $secondary-accent;
 }
 
 // NAVBAR
@@ -207,7 +275,8 @@ img:not(.no-style) {
     text-decoration: none;
 }
 .navbar li a.current-page {
-    text-decoration: underline;
+    //text-decoration: underline;
+    font-weight: bold;
 }
 .navbar li a:hover {
     @include link-hover;
@@ -218,11 +287,14 @@ img:not(.no-style) {
     margin-right: 5px;
     width: 25px;
     border-radius: 5px;
+
+    cursor: pointer;
 }
 
 // POST LIST
 .post-list {
     @include nospace;
+    margin-top: 15px;
     list-style-type: none;
 }
 
@@ -231,7 +303,7 @@ img:not(.no-style) {
 
     display: block;
     padding: 5px 15px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 
     text-decoration: none;
 
@@ -251,6 +323,7 @@ img:not(.no-style) {
 // CODE
 .highlight pre {
     @include flat-card;
+    margin-bottom: 15px;
     overflow: auto;
     line-height: 20px;
 }
@@ -292,14 +365,15 @@ pre.highlight {
 }
 
 .instagram-widget-wrapper {
-    margin-bottom: 25px;
+    margin-bottom: 15px;
 }
 
 .instagram-widget {
     white-space: nowrap;
     overflow-x: auto;
     padding-top: 5px;
-    margin: 5px auto;
+    margin: auto;
+    margin-bottom: 5px;
 }
 
 .instagram-widget img {
@@ -308,7 +382,7 @@ pre.highlight {
     position: relative;
     margin-right: 15px;
 
-    height: 130px;
+    height: 150px;
     cursor: pointer;
 
     left: 0;
@@ -363,20 +437,6 @@ pre.highlight {
 }
 
 // SNAKE
-#new-game-btn {
-    @include nospace;
-    @include flat-card;
-    margin-right: auto;
-    margin-bottom: 15px;
-    padding: 7px;
-
-    cursor: pointer;
-}
-
-#new-game-btn:hover {
-    @include hover-shadow;
-}
-
 #game-canvas {
     @include flat-card;
     margin-right: auto;

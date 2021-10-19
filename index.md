@@ -3,15 +3,13 @@ title: Home
 ---
 
 # Welcome to Squoop.info!
-I'm Sam McGowan. I'm an 18-year-old from the UK, and I make music and program. Sometimes I take photos.
-
-Welcome to my (still under constrution) website!
-
-<br>
+<hr>
 {% include instagram_widget.html %}
-<br>
+I'm Sam McGowan. I'm an 18-year-old from the UK, and I make music and program. Sometimes I take photos. Welcome to my (still under construction) website!
 
-```python
+[Check out my projects!](/projects.html){: .fancy-button .unstyled-link}
+
+<!-- ```python
 def make_website(a, b):
     site = make_empty_repository()
     try:
@@ -23,4 +21,6 @@ def make_website(a, b):
     except:
         raise WritersBlock()
     return site
-```
+``` -->
+
+

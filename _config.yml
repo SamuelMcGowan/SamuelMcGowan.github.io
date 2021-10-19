@@ -1,21 +1,12 @@
 title: Squoop's Homepage
 description: The homepage of Squoop.
 
-collections:
-  projects:
-      output: true
-
 defaults:
   - scope:
       path: ""
       type: "posts"
     values:
       layout: "post"
-  - scope:
-      path: ""
-      type: "projects"
-    values:
-      layout: "project_titled"
   - scope:
       path: ""
     values:

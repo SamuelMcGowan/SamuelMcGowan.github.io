@@ -1,0 +1,24 @@
+<div>
+    <h1>{{ page.title }}</h1>
+    <div class="project-controls">
+        {% if page.previous.url %}
+            <a class="unstyled-link project-link" href="{{ page.previous.url }}">
+                ⇦ {{ page.previous.title}}
+            </a>
+        {% else %}
+            <a class="project-disabled unstyled-link project-link">⇦ ...</a>
+        {% endif %}
+
+        {% if page.next.url %}
+            <a class="unstyled-link project-link project-next" href="{{ page.next.url }}">
+                {{ page.next.title}} ⇨
+            </a>
+        {% else %}
+            <a class="project-disabled unstyled-link project-link project-next">... ⇨</a>
+        {% endif %}
+    </div>
+    {% if page.date %}
+        <p class="post-info">{{ page.date | date_to_string }}, Sam McGowan</p>
+    {% endif %}
+    <hr>
+</div>

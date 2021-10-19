@@ -20,7 +20,7 @@ class Canvas {
     }
 
     setFont() {
-        this.context.font = '20px Work Sans';
+        this.context.font = '16px Work Sans';
         this.context.textBaseline = 'middle';
         this.context.textAlign = 'center';
     }
@@ -158,7 +158,7 @@ class Game {
 
         if (this.cellInSnake(nextX, nextY)) {
             this.gameOver = true;
-            this.gameOverMsg = `You went into yourself. Your final length was ${this.snake.length}.`
+            this.gameOverMsg = `You went into yourself! Your final length was ${this.snake.length}.`
             return;
         }
 
@@ -167,7 +167,7 @@ class Game {
             nextY < 0 || nextY >= canvas.height
         ) {
             this.gameOver = true;
-            this.gameOverMsg = `You hit an edge. Your final length was ${this.snake.length}.`;
+            this.gameOverMsg = `You hit an edge! Your final length was ${this.snake.length}.`;
             return;
         }
 
