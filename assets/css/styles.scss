@@ -343,6 +343,7 @@ pre.highlight {
 // PROJECT VIEWER
 .project-controls {
     width: 100%;
+    margin-bottom: 15px;
 }
 
 .project-link {
@@ -359,4 +360,26 @@ pre.highlight {
 .project-disabled {
     cursor: pointer;
     @include link-visited;
+}
+
+// SNAKE
+#new-game-btn {
+    @include nospace;
+    @include flat-card;
+    margin-right: auto;
+    margin-bottom: 15px;
+    padding: 7px;
+
+    cursor: pointer;
+}
+
+#new-game-btn:hover {
+    @include hover-shadow;
+}
+
+#game-canvas {
+    @include flat-card;
+    margin-right: auto;
+    margin-bottom: auto;
+    padding: 0;
 }
