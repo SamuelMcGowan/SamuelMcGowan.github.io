@@ -70,7 +70,7 @@ $fade-speed-slow: 100ms;
 
     max-width: 800px;
 
-    padding: 40px 20px;
+    padding: 40px 30px;
     margin: auto;
     margin-bottom: 40px;
 }
@@ -151,6 +151,13 @@ select {
 
 select:hover {
     @include hover-shadow;
+}
+
+img {
+    @include card;
+    margin-bottom: 15px;
+    
+    max-width: 100%;
 }
 
 .subtitle {
@@ -315,8 +322,13 @@ pre.highlight {
 
     top: 50%;
     left: 50%;
-    height: 400px;
+
+    max-height: 60%;
+    max-width: 60%;
     transform: translate(-50%, -50%);
+
+    opacity: 0;
+    transition-duration: $fade-speed-slow;
 
     box-shadow: 0 0 50px $bg-color-darkest;
     border-radius: $corner-size;
