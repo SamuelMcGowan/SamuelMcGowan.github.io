@@ -6,7 +6,8 @@ title: Links
 
 {% include instagram_widget.html %}
 
-- [SoundCloud](https://soundcloud.com/sam-mcgowan-music)
+- [SoundCloud](https://soundcloud.com/illuctant)
+- [Old SoundCloud](https://soundcloud.com/sam-mcgowan-music)
 - [Instagram](https://www.instagram.com/differently.artistic/)
 - [GitHub](https://github.com/SamuelMcGowan)
 - [Scratch](https://scratch.mit.edu/users/squoop/)
