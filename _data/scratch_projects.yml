@@ -4,3 +4,6 @@
 - title: Cloth Simulation
   link: "https://turbowarp.org/566813360/embed?fps=60"
   descr: "A 2D cloth simulation using the spring-mass model."
+- title: Text Editor
+  link: "https://turbowarp.org/634035928/embed?fps=60&hqpen"
+  descr: "A fully-featured text editor."
