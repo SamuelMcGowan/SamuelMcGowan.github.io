@@ -7,20 +7,4 @@ title: Home
 {% include instagram_widget.html %}
 I'm Sam McGowan. I'm an 19-year-old from the UK, and I make music and program (among other things). Sometimes I take photos. Welcome to my website!
 
-[Check out my projects!](/projects.html){: .fancy-button .unstyled-link}
-
-<!-- ```python
-def make_website(a, b):
-    site = make_empty_repository()
-    try:
-        site.design()
-    except:
-        raise SkillNotFoundError()
-    try:
-        site.add_content()
-    except:
-        raise WritersBlock()
-    return site
-``` -->
-
-
+[Check out my projects!](/posts.html){: .fancy-button .unstyled-link}
