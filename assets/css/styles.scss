@@ -3,23 +3,23 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Rubik:wght@300;700&family=Work+Sans&display=swap');
 
-$bg-color: #33333b;
-$bg-color-light: #4d4d59;
-$bg-color-dark: #2d2d33;
-$bg-color-darkest: #161618;
-$bg-color-mid: #3e3e47;
+$bg-color: #1b1c20;
+$bg-color-light: #27282d;
+$bg-color-dark: #161618;
+$bg-color-darkest: #000000;
+$bg-color-mid: #292a2f;
 $fg-color: #e6d9d1;
 $fg-color-light: #f7f1ed;
 $fg-color-dark: #b6afab;
-$accent-color: #e64b2c;
-$accent-color-dark: #9c2710;
-$secondary-accent: #53aec5;
+$accent-color: #fd9f53;
+$accent-color-dark: #e65512;
+$secondary-accent: #6cbbe6;
 
-$corner-size: 3px;
+$corner-size: 5px;
 
 $font-size-code: 13px;
 
-$fade-speed: 30ms;
+$fade-speed: 15ms;
 $fade-speed-slow: 100ms;
 
 @mixin nospace {
