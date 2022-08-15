@@ -111,7 +111,9 @@ body {
 //     border: 1px solid black;
 // }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: 'Archivo Black', sans-serif;
     margin-bottom: 15px;
 }
@@ -232,7 +234,8 @@ a.fancy-button.unstyled-link {
     font-style: italic;
 }
 
-::-moz-selection, ::selection {
+::-moz-selection,
+::selection {
     color: $bg-color-dark;
     background: $secondary-accent;
 }
@@ -266,7 +269,8 @@ a.fancy-button.unstyled-link {
     vertical-align: middle;
 }
 
-.navbar li a, .navbar li a:visited {
+.navbar li a,
+.navbar li a:visited {
     @include link;
     display: block;
     position: relative;
@@ -274,10 +278,12 @@ a.fancy-button.unstyled-link {
 
     text-decoration: none;
 }
+
 .navbar li a.current-page {
     //text-decoration: underline;
     font-weight: bold;
 }
+
 .navbar li a:hover {
     @include link-hover;
     bottom: 1px;
@@ -309,13 +315,16 @@ a.fancy-button.unstyled-link {
 
     //border-radius: $corner-size;
 }
+
 .post-list a:hover {
     @include hover-shadow;
 }
 
-.post-list h2, .post-list a:visited {
+.post-list h2,
+.post-list a:visited {
     @include link;
 }
+
 .post-list a:hover h2 {
     @include link-hover;
 }
@@ -340,6 +349,7 @@ pre.highlight {
 #turbowarp {
     display: none;
 }
+
 #turbowarp-viewer {
     @include nospace;
     @include flat-card;
@@ -414,10 +424,6 @@ pre.highlight {
     border-radius: $corner-size;
 }
 
-.tiktok-embed {
-    border-radius: $corner-size;
-}
-
 // PROJECT VIEWER
 .project-controls {
     width: 100%;
@@ -427,6 +433,7 @@ pre.highlight {
 .project-link {
     @include link;
 }
+
 .project-link:hover {
     @include link-hover;
 }
