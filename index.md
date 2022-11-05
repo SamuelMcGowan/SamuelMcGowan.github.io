@@ -15,11 +15,11 @@ I make Drum and Bass, House and other kinds of electronic music in Bitwig Studio
 
 I also sometimes post tracks [on SoundCloud](https://soundcloud.com/illuctant).
 
-## Instagram
+## Photography
 
 {% include instagram_widget.html %}
 
-## GitHub
+## Programming
 
 ```python
 def make_website(a, b):
