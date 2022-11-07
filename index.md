@@ -40,3 +40,7 @@ My GitHub is [here](https://github.com/SamuelMcGowan). It's mainly Rust and them
 ## Scratch
 
 Come and watch me flex my block-based programming skills [on Scratch](https://scratch.mit.edu/users/squoop/).
+
+## Mastodon
+
+I'm on Mastodon! Here's <a rel="me" href="https://mastodon.lol/web/@squoop">my Mastodon profile</a>
