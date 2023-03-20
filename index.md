@@ -5,7 +5,7 @@ title: Home
 # Welcome to Squoop.info!
 
 <hr>
-I'm Sam McGowan. I'm an 19-year-old from the UK. Welcome to my website!
+I'm Sam McGowan. I'm an 20-year-old from the UK. Welcome to my website!
 
 [Check out my latest posts!](/posts.html){: .fancy-button .unstyled-link}
 
